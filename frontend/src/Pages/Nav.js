@@ -7,15 +7,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function NavBar() {
     return(
         <div style={style}>
-            <nav class="nav">
+            <div class="topnav">
                 <img className="logo" src={logo}></img>
-                <a className="link" href="#">Steam</a>
+                <a class="active" href="#">Home</a>
                 <a className="link" href="#">Store</a>
                 <a className="link" href="#">Community</a>
                 <a className="link" href="#">User</a>
                 <a className="link" href="#">Chat</a>
                 <a className="link" href="#">Support</a>
-            </nav>
+                <input type="text" className="searchbar" placeholder="Search.." />
+            </div>
       </div>
     )
 }

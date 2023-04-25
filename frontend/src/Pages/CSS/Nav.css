@@ -1,17 +1,56 @@
-Nav, .nav, img {
-    background-color: #2d3339;
-}
-
 .link { 
-    display: block;
+    display: flex;
     padding: 1%;
     color: white; 
     text-decoration: none;
 }
 
 .logo {
+    float: left;
     display: block;
     margin-top: 0.2%;
     margin-left: 1%;
     margin-right: 1%;
+    margin-bottom: 0.2%;
+}
+
+.searchbar {
+    float: right;
+    margin-top: 0.8%;
+    margin-right: 1%;
+    font-size: 17px;
+    height: 50%;
+    border: none;
+    border-radius: 9px;
+}
+
+.topnav, .logo {
+    overflow: hidden;
+    background-color: #2d3339;
+    color: white;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a, .searchbar {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .searchbar {
+        border: 1px solid #2d3339; 
+    }
 }
