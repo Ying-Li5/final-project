@@ -1,5 +1,14 @@
 # Steam Copycat
 
+## Table of Content
+
+1. [Description](#description)
+2. [Demo](#demo)
+3. [Technical Information](#technical-information)
+4. [Technologies](#technologies)
+5. [Issues](#issues)
+6. [References](#references)
+
 ## Description
 
 ## Demo
@@ -72,3 +81,5 @@ npm nodemon
 
 * [W3School](https://www.w3schools.com/)
   * [Nav with search](https://www.w3schools.com/howto/howto_css_searchbar.asp)
+
+* [Steam API Documentation](https://steamcommunity.com/dev)
