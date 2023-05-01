@@ -1,6 +1,12 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const cors = require('cors')
+
+// MIDDLEWARE
+app.use(express.json())
+
+app.use(cors())
 
 const gameController = require("./controllers/gameController")
 const reviewController = require("./controllers/reviewController")
