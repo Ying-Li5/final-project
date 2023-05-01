@@ -2,10 +2,10 @@
 
 import './App.css';
 import React from 'react';
-import Nav from './Pages/Nav'
-import Login from './Pages/Login'
-import User from './Pages/User'
-import Main from './Pages/Main'
+import Nav from './components/Nav/Nav'
+import Login from './components/LoginPage/Login'
+import User from './components/UserPage/User'
+import Main from './components/MainPage/Main'
 
 export default function App() {
   return (

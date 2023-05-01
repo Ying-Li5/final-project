@@ -1,25 +1,27 @@
-import React, { useEffect } from "react";
-import style from './CSS/Main.css';
-import mockData from '../public/images/game.jpg';
+import React, { useEffect, useState } from "react";
+import style from './Main.css';
 import { FaUserFriends } from "react-icons/fa";
 import { RiSignalTowerLine, RiFileList2Fill, RiPercentLine } from "react-icons/ri";
 import { HiOutlineClock, HiTag, HiPlus } from "react-icons/hi";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { AiOutlineStock } from "react-icons/ai";
+import { GameCard } from "../GameCard/GameCard";
 
 export default function Main() {
+    const [gameState, setGameState] = useState([]) //First one is the state, second one is a function to set the state
+
     useEffect(() => {
         const url = `http://localhost:3000/game`
         fetch(url, {
             method: "GET",
             headers: {'Content-Type': 'application/json'},
         }).then((result) => {
-            result.json().then((resolvedResult) => console.log(resolvedResult))
+            result.json().then((resolvedResult) => setGameState(resolvedResult))
         })
     }, [])
 
     return(
-        <div className="main-grid-container">
+        <div className="main-grid-container" style={ style }>
             <div className="grid-item-1">
                 <ul className="recommended">
                     <li className="categories">RECOMMENDED</li>
@@ -62,18 +64,11 @@ export default function Main() {
             </div>
 
             <div className="grid-item-2">
-                <h6 className='content-title'>FEATURED AND RECOMMENDED</h6>
-                <img className="game-data" src={mockData} alt="game-data" />
-            </div>
-
-            <div className="grid-item-3">
-                <h6 className='content-title-1'>SPECIAL OFFERS</h6>
-                <img className="game-data-1" src={mockData} alt="game-data" />
-            </div>
-
-            <div className="grid-item-4">
-                <h6 className='content-title-2'>BROWSE BY CATEGORIES</h6>
-                <img className="game-data-2" src={mockData} alt="game-data" />
+                {gameState.map((game) => {
+                    return (
+                        <GameCard game={game} />
+                    )
+                })}
             </div>
         </div>
     )

@@ -1,8 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import profilePic from '../public/images/Alax.jpg'
-import style from '../Pages/CSS/User.css'
-// import "bootstrap/dist/js/bootstrap.bundle.min";
+import profilePic from '../../public/images/Alax.jpg'
+import style from './User.css'
 
 export default function User() {
     return(

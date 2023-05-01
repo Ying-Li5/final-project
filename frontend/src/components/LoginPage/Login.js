@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import style from './CSS/Login.css'
-// import "bootstrap/dist/js/bootstrap.bundle.min";
+import style from './Login.css'
 
 export default function Login() {
     return(
