@@ -8,7 +8,7 @@ export default function NavBar() {
         <div style={style}>
             <div class="topnav">
                 <img className="logo" src={logo}></img>
-                <a class="active" href="#">Home</a>
+                <a className="link" href="#">Home</a>
                 <a className="link" href="#">Store</a>
                 <a className="link" href="#">Community</a>
                 <a className="link" href="#">User</a>

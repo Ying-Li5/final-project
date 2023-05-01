@@ -16,8 +16,16 @@ li {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .aside {
-    margin-top: 1%;
+    background-color: #434c56;
+}
+
+.aside:hover {
+    color: #967887;
 }
 
 

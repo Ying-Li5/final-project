@@ -25,41 +25,72 @@ export default function Main() {
             <div className="grid-item-1">
                 <ul className="recommended">
                     <li className="categories">RECOMMENDED</li>
-                    <li><FaUserFriends /> By Friends</li>
-                    <li><RiSignalTowerLine /> By Curators</li>
-                    <li><HiTag /> Tags</li>
+                    <li>
+                        <FaUserFriends /> 
+                        <a href="#" className="aside"> By Friends</a>
+                    </li>
+                    <li>
+                        <RiSignalTowerLine /> 
+                        <a href="#" className="aside"> By Curators</a>
+                    </li>
+                    <li>
+                        <HiTag /> 
+                        <a href="#" className="aside"> Tags</a>
+                    </li>
                 </ul>
 
                 <ul>
                     <li className="categories">DISCOVERY QUEUES</li>
-                    <li><RiFileList2Fill /> Recommendations</li>
-                    <li><HiPlus /> New Releases</li>
+                    <li>
+                        <RiFileList2Fill /> 
+                        <a href="#" className="aside"> Recommendations</a>
+                    </li>
+                    <li>
+                        <HiPlus /> 
+                        <a href="#" className="aside"> New Releases</a>
+                    </li>
                 </ul>
 
                 <ul>
                     <li className="categories">BROWSE CATEGORIES</li>
-                    <li><AiOutlineStock /> Top Sellers</li>
-                    <li><HiPlus /> New Releases</li>
-                    <li><HiOutlineClock /> Upcoming</li>
-                    <li><RiPercentLine /> Specials</li>
-                    <li><IoLogoGameControllerB /> VR Titles</li>
-                    <li><IoLogoGameControllerB /> Controller-Friendly</li>
+                    <li><AiOutlineStock /> 
+                        <a href="#" className="aside"> Top Sellers</a>
+                    </li>
+                    <li><HiPlus /> 
+                        <a href="#" className="aside"> New Releases</a>
+                    </li>
+                    <li>
+                        <HiOutlineClock /> 
+                        <a href="#" className="aside"> Upcoming</a>
+                    </li>
+                    <li>
+                        <RiPercentLine /> 
+                        <a href="#" className="aside"> Specials</a>
+                    </li>
+                    <li>
+                        <IoLogoGameControllerB />
+                        <a href="#" className="aside"> VR Titles</a>
+                    </li>
+                    <li>
+                        <IoLogoGameControllerB />
+                        <a href="#" className="aside"> Controller-Friendly</a> 
+                    </li>
                 </ul>
 
                 <ul>
                     <li className="categories">BROWSE BY GENRE</li>
-                    <li>Free to Play</li>
-                    <li>Early Access</li>
-                    <li>Action</li>
-                    <li>Adventure</li>
-                    <li>Casual</li>
-                    <li>Indie</li>
-                    <li>Massively Multiplayer</li>
-                    <li>Racing</li>
-                    <li>RPG</li>
-                    <li>Simulation</li>
-                    <li>Sports</li>
-                    <li>Strategy</li>
+                    <li><a href="#" className="aside">Free to Play</a></li>
+                    <li><a href="#" className="aside">Early Access</a></li>
+                    <li><a href="#" className="aside">Action</a></li>
+                    <li><a href="#" className="aside">Adventure</a></li>
+                    <li><a href="#" className="aside">Casual</a></li>
+                    <li><a href="#" className="aside">Indie</a></li>
+                    <li><a href="#" className="aside">Massively Multiplayer</a></li>
+                    <li><a href="#" className="aside">Racing</a></li>
+                    <li><a href="#" className="aside">RPG</a></li>
+                    <li><a href="#" className="aside">Simulation</a></li>
+                    <li><a href="#" className="aside">Sports</a></li>
+                    <li><a href="#" className="aside">Strategy</a></li>
                 </ul>
             </div>
 
