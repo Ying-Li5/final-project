@@ -13,6 +13,9 @@ export const GameCard = (props) => {
                     <Card.Title>{ game.title } ({ game.year })</Card.Title>
                     <Card.Text>{ game.average_score }/10</Card.Text>
                     <Card.Text>{ game.description }</Card.Text>
+
+                    {/* reroute to game id on click  */}
+                    <a href="/game/:game_id" class="btn btn-dark">More on { game.title }</a>
                 </Card.Body>
             </div>
         </Card>
