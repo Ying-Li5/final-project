@@ -1,0 +1,87 @@
+/* Aside */
+ul {
+    color: white;
+    z-index: inherit;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+}
+
+.categories {
+    text-align: left;
+    width: 100%;
+}
+
+.aside {
+    margin-top: 1%;
+}
+
+/* Main content  */
+.content-title, .content-title-1, .content-title-2 {
+    color: white;
+    text-align: left;
+}
+
+/* grid  */
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 2fr 0.1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'aside featured '
+    'aside special'
+    'aside browse';
+    gap: 1%;
+    /* background-color: #2196F3; */
+    padding: 1%;
+  }
+
+.grid-item-1 {
+    grid-area: aside;
+}
+
+.grid-item-2 {
+    grid-area: featured;
+}
+
+.grid-item-3 {
+    grid-area: special;
+}
+
+.grid-item-4 {
+    grid-area: browse;
+}
+
+.game-data {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.game-data-1 {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.game-data-2 {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* responsive  */
+@media screen and (max-width: 800px) {
+    .aside {
+        display: none;
+    }
+
+    .game-data{
+        position: static;
+        margin-top: 0%;
+    }
+}

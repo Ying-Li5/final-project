@@ -40,8 +40,13 @@
     font-size: 17px;
 }
 
-@media screen and (max-width: 600px) {
-    .topnav a, .searchbar {
+@media screen and (max-width: 500px) {
+    .topanv {
+        position: static;
+        width: 100%;
+    }
+
+    /* .topnav a, .searchbar {
         float: none;
         display: block;
         text-align: left;
@@ -52,5 +57,5 @@
 
     .searchbar {
         border: 1px solid #2d3339; 
-    }
+    } */
 }
