@@ -3,21 +3,27 @@ import style from './ReviewDisplay.css'
 import MockImage from '../../public/images/Alax.jpg'
 
 const ReviewDisplay = (props) => {
+    const { reviews } = props
     return (
         <div className="review-container" style={ style }>
-            <div className="reviewer-container">
-                <div className="reviewer">
-                    <img src={ MockImage } alt="Avatar" class='avatar' />
-                    <div className="reviewer-info">
-                        <p className="content">REVIEWER NAME</p>
-                        <p className="content">REVIEWER SCORE</p>
-                    </div> 
+            {reviews.map((review) => {
+                return (
+                    <div className="reviewer-container">
+                    <div className="reviewer">
+                        <img src={ MockImage } alt="Avatar" class='avatar' />
+                        <div className="reviewer-info">
+                            <p className="content">{ review.author_id }</p>
+                            <p className="content">{ review.score }</p>
+                        </div> 
+                    </div>
+    
+                    <div className="reviewer-description">
+                        <p className="content">{ review.content }</p>
+                    </div>
                 </div>
-
-                <div className="reviewer-description">
-                    <p className="content">REVIEWER DESCRIPTION</p>
-                </div>
-            </div>
+                )
+            })
+            }
         </div>
     )
 }

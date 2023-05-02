@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import style from './GameCard.css'
 
 export const GameCard = (props) => {
-    console.log(props)
     const { game } = props
     return (
         <Card className="card">
@@ -14,8 +13,7 @@ export const GameCard = (props) => {
                     <Card.Text>{ game.average_score }/10</Card.Text>
                     <Card.Text>{ game.description }</Card.Text>
 
-                    {/* reroute to game id on click  */}
-                    <a href="/game/:game_id" class="btn btn-dark">More on { game.title }</a>
+                    <a href={`/game/${ game._id }`} class="btn btn-dark">More on { game.title }</a>
                 </Card.Body>
             </div>
         </Card>

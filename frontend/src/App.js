@@ -10,7 +10,6 @@ import Login from './components/LoginPage/Login'
 import User from './components/UserPage/User'
 import Main from './components/MainPage/Main'
 import GameDisplay from './components/GameDisplay/GameDisplay'
-import ReviewDisplay from './components/ReviewDisplay/ReviewDisplay';
 
 export default function App() {
   return (
@@ -19,10 +18,10 @@ export default function App() {
       {/* routing -- need to be fixed */}
       <BrowserRouter>
         <Switch>
-          <Route path='/' component= { Main } />
+          <Route path='/game/:game_id' component={ GameDisplay } strict />
           <Route path='/login' component={ Login }/>
-          <Route path='/game/' component={ GameDisplay } />
-          <Route path='/user/' component={ User } />
+          <Route path='/user' component={ User } strict />
+          <Route path='/' component= { Main } />
         </Switch>
       </BrowserRouter>
     </div>
