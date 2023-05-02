@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const cors = require('cors')
+const mongoose = require('mongoose')
 
 // MIDDLEWARE
 app.use(express.json())
@@ -13,8 +14,14 @@ const reviewController = require("./controllers/reviewController")
 const userController = require("./controllers/userController")
 
 app.use("/game", gameController)
-app.use("/user", reviewController)
-app.use("/review", userController)
+app.use("/user", userController)
+app.use("/review", reviewController)
+
+mongoose.connect("mongodb://127.0.0.1/final-project", {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true
+})
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!')

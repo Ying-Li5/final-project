@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 
 const ReviewSchema = new mongoose.Schema({
-    id: { type: Number },
-    author: { type: String },
+    author_id: { type: String },
     score: { type: Number },
-    game_id: { type: Number },
+    game_id: { type: String },
     title: { type: String },
     content: { type: String },
 }) 
