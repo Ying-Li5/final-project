@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import style from './GameDisplay.css'
 import ReviewDisplay from "../ReviewDisplay/ReviewDisplay";
+import AddComment from '../AddComment/AddComment'
 
 const GameDisplay = (props) => {
     const [gameState, setGameState] = useState() //First one is the state, second one is a function to set the state
@@ -51,8 +52,13 @@ const GameDisplay = (props) => {
                     <p className="content">PUBLISHER: </p>
                 </div>
             </div>
-            {/* CREATE REVIEW SECTION HERE */}
+
             <div className="game-grid-3">
+                <h4 className="content">HAVE A REVIEW?</h4>
+                <AddComment />
+            </div>
+            
+            <div className="game-grid-4">
                 <h4 className="content">REVIEWS</h4>
                 <div className="reviews-container">
                     < ReviewDisplay reviews={ reviewState }/>

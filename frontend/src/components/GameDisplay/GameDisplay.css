@@ -8,10 +8,11 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.1fr 0.3fr 1fr;
     grid-template-areas: 
     'header header'
     'image data'
+    'form form'
     'reviews reviews';
 }
 
@@ -19,27 +20,50 @@
     grid-area: header;
     text-align: left;
     background-color: #22262b;
+    border-bottom: 1px #8d8d8d solid;
 }
 
 .game-grid-2 {
     grid-area: image;
     text-align: left;
     background-color: #22262b;
+    padding: 2%;
 }
 
 .game-grid-3 {
+    grid-area: form;
+    text-align: left;
+    background-color: #22262b;
+    padding-top: 2%;
+}
+
+.game-grid-4 {
     grid-area: reviews;
     text-align: left;
     background-color: #22262b;
+    padding-top: 2%;
 }
 
-.content, .review-container, .reviewer-info {
+.content, .review-container, .reviewer-info, .form-group {
     background-color: #22262b;
 }
 
+.form-group {
+    padding-top: 1%;
+    background-color: #22262b;
+}
+
+.btn-success{
+    float: right;
+    margin-top: 1%;
+}
+
+/* .content {
+    font-variant: small-caps;
+} */
+
 .review-container {
-    border-top: 1px white solid;
-    border-bottom: 1px white solid;
+    border-top: 1px #8d8d8d solid;
     padding: 2%
 }
 
@@ -59,7 +83,6 @@
     background-color: #22262b;
     width: auto;
     height: auto;
-    margin-bottom: 5%;
 }
 
 .game-container-info {
