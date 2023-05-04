@@ -1,96 +1,77 @@
-.game-grid-container {
-    background-color: #22262b;
-    width: 60%;
+/* GRID CONTAINER  */
+.display-container {
+    background: #22262b;
+    color: white;
     margin-left: auto;
     margin-right: auto;
-    padding: 2% 1% 1% 1%;
-    color: white;
+    width: 120vh;
+    padding: 2rem;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.3fr 1fr;
+    grid-template-rows: 0.09fr 0.4fr 0.3fr 0.5fr;
     grid-template-areas: 
-    'header header'
-    'image data'
+    'title title'
+    'img info'
     'form form'
-    'reviews reviews';
+    'reviews reviews' ;
 }
 
-.game-grid-1 {
-    grid-area: header;
+/* GAME TITLE  */
+.display-title {
+    background: #22262b;
+    grid-area: title;
     text-align: left;
-    background-color: #22262b;
     border-bottom: 1px #434c56 solid;
-    height: max-content;
 }
 
-.game-grid-2 {
-    grid-area: image;
-    text-align: left;
-    background-color: #22262b;
-    padding-top: 2%;
-}
-
-.game-grid-3 {
-    grid-area: data;
-    text-align: left;
-    background-color: #22262b;
-    padding-top: 2%;
-}
-
-.game-grid-4 {
-    grid-area: form;
-    text-align: left;
-    background-color: #22262b;
-    padding-top: 2%;
-}
-
-.game-grid-5 {
-    grid-area: reviews;
-    text-align: left;
-    background-color: #22262b;
+/* IMG  */
+.display-img {
+    background: #22262b;
+    grid-area: img;
     padding-top: 2%;
 }
 
 .game-art-display {
-    background-color: #22262b;
     width: auto;
     height: auto;
     justify-content: center;
 }
 
-.game-container-info {
-    display: inline-block;
-    background-color: #22262b;
-    padding-left: 3%;
-    width: 400px;
+/* GAME INFO  */
+.display-info {
+    background: #22262b;
+    grid-area: info;
+    padding-top: 2%;
 }
 
-.add-review, .display-review {
-    background-color: #22262b;
+.game-container-info, .game-title {
+    background: #22262b;
+    text-align: left;
+}
+
+/* DISPLAY FORM  */
+.display-form {
+    background: #22262b;
+    grid-area: form;
+}
+
+.add-title {
+    background: #22262b;
+    text-align: left;
     border-bottom: 1px #434c56 solid;
-    padding-bottom: 1%;
+    padding-bottom: 0.5%;
 }
 
-.display-title {
-    font-weight: bold;
-    background-color: #22262b;
+/* DISPLAY REVIEWS  */
+.display-reviews {
+    background: #22262b;
+    grid-area: reviews;
 }
 
-/* @media screen and (max-width: 800px) {
-    .game-grid-container {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "header"
-        'image'
-        'data'
-        'form'
-        'reviews';
-    }
-} */
+.reviews-title {
+    background: #22262b;
+    text-align: left;
+    border-bottom: 1px #434c56 solid;
+    padding-bottom: 0.5%;
+}

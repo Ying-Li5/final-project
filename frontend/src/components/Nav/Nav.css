@@ -44,11 +44,11 @@
     font-size: 17px;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     .topanv {
         position: static;
         width: 100%;
-    }
+    } */
 
     /* .topnav a, .searchbar {
         float: none;
@@ -62,4 +62,4 @@
     .searchbar {
         border: 1px solid #2d3339; 
     } */
-}
+/* } */

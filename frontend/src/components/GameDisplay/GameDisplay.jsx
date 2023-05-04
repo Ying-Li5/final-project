@@ -40,34 +40,32 @@ const GameDisplay = (props) => {
         return <div></div>
     }
     return (
-        <div className="game-grid-container" style={ style }>
-            <div className="game-grid-1">
-                <h1 className="display-title">{ gameState.title }</h1>
-            </div>
-
-            <div className="game-grid-2">
+        <div className="display-container">
+            <h1 className="display-title">{ gameState.title }</h1>
+            
+            <div className="display-img">
                 <img variant="top" src={ gameState.art } className="game-art-display"/>
             </div>
-
-            <div className="game-grid-3">
+            
+            <div className="display-info"> 
                 <div className="game-container-info">
-                    <h4 className="display-title">{ gameState.title }</h4>
+                    <h4 className="game-title">{ gameState.title }</h4>
                     <p className="content">{ gameState.description }</p>
                     <p className="content">RATING: { gameState.average_score }/10</p>
                     <p className="content">RELEASE DATE: { gameState.year } </p>
                 </div>
             </div>
 
-            <div className="game-grid-4">
-                <h4 className="add-review">HAVE A REVIEW?</h4>
+            <div className="display-form">
+                <h4 className="add-title">HAVE A REVIEW?</h4>
                 <AddComment game_id={ game_id } addReview={ addReview }/>
             </div>
-            
-            <div className="game-grid-5">
-                <h4 className="display-review">REVIEWS</h4>
-                <div className="reviews-container">
-                    < ReviewDisplay reviews={ reviewState }/>
-                </div>
+
+            <div className="display-reviews">
+                <h4 className="reviews-title">REVIEWS</h4>
+                    <div className="reviews-container">
+                        < ReviewDisplay reviews={ reviewState }/>
+                    </div>
             </div>
         </div>
     )

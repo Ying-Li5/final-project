@@ -1,9 +1,23 @@
+.comment-form {
+    background-color: #434c56;
+    padding: 2%;
+    margin-bottom: 2%;
+    height: 440px;
+    border-radius: 40px;
+    box-shadow: #d3d3d3 0px 2px 5px;
+}
+
 .form-group {
     padding-top: 1%;
-    background-color: #22262b;
+    background-color: #434c56;
+    text-align: left;
 }
 
 .btn-success{
     float: right;
     margin-top: 1%;
+}
+
+.form-content {
+    background-color: #434c56;
 }
