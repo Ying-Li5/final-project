@@ -7,8 +7,8 @@
     color: white;
 
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.1fr 0.3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.3fr 1fr;
     grid-template-areas: 
     'header header'
     'image data'
@@ -20,73 +20,77 @@
     grid-area: header;
     text-align: left;
     background-color: #22262b;
-    border-bottom: 1px #8d8d8d solid;
+    border-bottom: 1px #434c56 solid;
+    height: max-content;
 }
 
 .game-grid-2 {
     grid-area: image;
     text-align: left;
     background-color: #22262b;
-    padding: 2%;
+    padding-top: 2%;
 }
 
 .game-grid-3 {
-    grid-area: form;
+    grid-area: data;
     text-align: left;
     background-color: #22262b;
     padding-top: 2%;
 }
 
 .game-grid-4 {
+    grid-area: form;
+    text-align: left;
+    background-color: #22262b;
+    padding-top: 2%;
+}
+
+.game-grid-5 {
     grid-area: reviews;
     text-align: left;
     background-color: #22262b;
     padding-top: 2%;
 }
 
-.content, .review-container, .reviewer-info, .form-group {
-    background-color: #22262b;
-}
-
-.form-group {
-    padding-top: 1%;
-    background-color: #22262b;
-}
-
-.btn-success{
-    float: right;
-    margin-top: 1%;
-}
-
-/* .content {
-    font-variant: small-caps;
-} */
-
-.review-container {
-    border-top: 1px #8d8d8d solid;
-    padding: 2%
-}
-
-.reviewer {
-    background-color: #22262b;
-    display: inline-flex;
-}
-
-.avatar {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
 .game-art-display {
     background-color: #22262b;
     width: auto;
     height: auto;
+    justify-content: center;
 }
 
 .game-container-info {
     display: inline-block;
     background-color: #22262b;
-    padding-left: 5%;
+    padding-left: 3%;
+    width: 400px;
 }
+
+.add-review, .display-review {
+    background-color: #22262b;
+    border-bottom: 1px #434c56 solid;
+    padding-bottom: 1%;
+}
+
+.display-title {
+    font-weight: bold;
+    background-color: #22262b;
+}
+
+/* @media screen and (max-width: 800px) {
+    .game-grid-container {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "header"
+        'image'
+        'data'
+        'form'
+        'reviews';
+    }
+} */

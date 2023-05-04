@@ -1,20 +1,32 @@
-.game-card {
+.card {
+    width: 20rem;
+    height: 24rem;
+    margin: 1%;
+    display: inline-flex;
     color: white;
-    background-color: #424242;
-    display: inline-block;
-    height: 30rem;
+    background-color: #22262b;
 }
 
 .card-body, .card-title, .card-text {
-    background-color: #424242;
-}
-
-.card {
-    width: 15rem;
-    margin: 1%;
-    display: inline-flex;
+    background-color: #22262b;
 }
 
 .game-art {
-    height: 250px;
+    height: 175px;
+}
+
+.card-title {
+    font-weight: bolder;
+}
+
+.card-text {
+    font-size: 13px;
+}
+
+.game-description {
+    text-align: left;
+}
+
+.btn-success {
+    float: center;
 }

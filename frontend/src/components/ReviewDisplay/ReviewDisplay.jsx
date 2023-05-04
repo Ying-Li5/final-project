@@ -6,21 +6,30 @@ const ReviewDisplay = (props) => {
     const { reviews } = props
     return (
         <div className="review-container" style={ style }>
+            <h4></h4>
             {reviews.map((review) => {
                 return (
                     <div className="reviewer-container">
-                    <div className="reviewer">
-                        <img src={ MockImage } alt="Avatar" class='avatar' />
-                        <div className="reviewer-info">
-                            <p className="content">{ review.author_id }</p>
-                            <p className="content">{ review.score }</p>
-                        </div> 
+                        <div className="reviewer">
+                            <div className="profile-img">
+                                <img src={ MockImage } alt="Avatar" class='avatar' />
+
+                                <div className="reviewer-info">
+                                    <p className="content-reviewer">
+                                        { review.author_id } 
+                                        <br />
+                                        Score: { review.score }
+                                    </p>
+                                </div> 
+                            </div>
+                        
+        
+                            <div className="reviewer-description">
+                                <p className="content-title">{ review.title }</p>
+                                <p className="content">{ review.content }</p>
+                            </div>
+                        </div>
                     </div>
-    
-                    <div className="reviewer-description">
-                        <p className="content">{ review.content }</p>
-                    </div>
-                </div>
                 )
             })
             }

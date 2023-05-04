@@ -9,6 +9,10 @@ const GameDisplay = (props) => {
     const [reviewState, setReviewState] = useState([])
     const { game_id } = useParams()
 
+    const addReview = (newReview) => {
+        setReviewState([...reviewState, newReview])
+    }
+
     useEffect(() => {
         const url = `http://localhost:3000/game/${game_id}`
         fetch(url, {
@@ -38,28 +42,29 @@ const GameDisplay = (props) => {
     return (
         <div className="game-grid-container" style={ style }>
             <div className="game-grid-1">
-                <h1 className="content">{ gameState.title }</h1>
+                <h1 className="display-title">{ gameState.title }</h1>
             </div>
 
             <div className="game-grid-2">
                 <img variant="top" src={ gameState.art } className="game-art-display"/>
-                <div className="game-container-info">
-                    <h4 className="content">{ gameState.title }</h4>
-                    <p className="content">{ gameState.description }</p>
-                    <p className="content">RATING: { gameState.average_score }/10</p>
-                    <p className="content">RELEASE DATE: </p>
-                    <p className="content">DEVELOPER: </p>
-                    <p className="content">PUBLISHER: </p>
-                </div>
             </div>
 
             <div className="game-grid-3">
-                <h4 className="content">HAVE A REVIEW?</h4>
-                <AddComment />
+                <div className="game-container-info">
+                    <h4 className="display-title">{ gameState.title }</h4>
+                    <p className="content">{ gameState.description }</p>
+                    <p className="content">RATING: { gameState.average_score }/10</p>
+                    <p className="content">RELEASE DATE: { gameState.year } </p>
+                </div>
+            </div>
+
+            <div className="game-grid-4">
+                <h4 className="add-review">HAVE A REVIEW?</h4>
+                <AddComment game_id={ game_id } addReview={ addReview }/>
             </div>
             
-            <div className="game-grid-4">
-                <h4 className="content">REVIEWS</h4>
+            <div className="game-grid-5">
+                <h4 className="display-review">REVIEWS</h4>
                 <div className="reviews-container">
                     < ReviewDisplay reviews={ reviewState }/>
                 </div>
