@@ -9,13 +9,12 @@ router.get("/:review_id", async function (req, res) {
 
 router.get("/game/:game_id", async function (req, res) {
     const result = await reviewService.getReviewByGameId(req.params.game_id)
-    console.log("at the get")
-    console.log(result)
     res.status(200).json(result)
 });
 
-router.post("/", function (req, res) {
-    res.send("POST - Create Review");
+router.post("/", async function (req, res) {
+    const result = await reviewService.createReview(req.body)
+    res.send(result);
 });
 
 router.get("/:game_id", function (req, res) {

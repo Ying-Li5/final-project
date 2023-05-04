@@ -13,7 +13,12 @@ const getReviewByGameId = async (game_id) => {
     })
 }
 
+const createReview = async (review) => {
+    return await Review.create(review)
+}
+
 module.exports = {
     getReviewByReviewId: getReviewByReviewId,
-    getReviewByGameId: getReviewByGameId
+    getReviewByGameId: getReviewByGameId,
+    createReview: createReview
 }
