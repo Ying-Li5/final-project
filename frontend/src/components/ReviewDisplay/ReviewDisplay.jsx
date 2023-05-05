@@ -22,7 +22,6 @@ const ReviewDisplay = (props) => {
                                 </div> 
                             </div>
                         
-        
                             <div className="reviewer-description">
                                 <p className="content-title">{ review.title }</p>
                                 <p className="content">{ review.content }</p>

@@ -25,14 +25,17 @@ export default function Main() {
             <div className="grid-item-1">
                 <ul className="recommended">
                     <li className="categories">RECOMMENDED</li>
+                    
                     <li>
                         <FaUserFriends /> 
                         <a href="#" className="aside"> By Friends</a>
                     </li>
+
                     <li>
                         <RiSignalTowerLine /> 
                         <a href="#" className="aside"> By Curators</a>
                     </li>
+
                     <li>
                         <HiTag /> 
                         <a href="#" className="aside"> Tags</a>
@@ -41,10 +44,12 @@ export default function Main() {
 
                 <ul>
                     <li className="categories">DISCOVERY QUEUES</li>
+
                     <li>
                         <RiFileList2Fill /> 
                         <a href="#" className="aside"> Recommendations</a>
                     </li>
+
                     <li>
                         <HiPlus /> 
                         <a href="#" className="aside"> New Releases</a>
@@ -53,24 +58,30 @@ export default function Main() {
 
                 <ul>
                     <li className="categories">BROWSE CATEGORIES</li>
+
                     <li><AiOutlineStock /> 
                         <a href="#" className="aside"> Top Sellers</a>
                     </li>
+
                     <li><HiPlus /> 
                         <a href="#" className="aside"> New Releases</a>
                     </li>
+
                     <li>
                         <HiOutlineClock /> 
                         <a href="#" className="aside"> Upcoming</a>
                     </li>
+
                     <li>
                         <RiPercentLine /> 
                         <a href="#" className="aside"> Specials</a>
                     </li>
+
                     <li>
                         <IoLogoGameControllerB />
                         <a href="#" className="aside"> VR Titles</a>
                     </li>
+
                     <li>
                         <IoLogoGameControllerB />
                         <a href="#" className="aside"> Controller-Friendly</a> 

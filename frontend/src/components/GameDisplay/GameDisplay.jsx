@@ -61,8 +61,9 @@ const GameDisplay = (props) => {
     if (gameState == undefined) {
         return <div></div>
     }
+    
     return (
-        <div className="display-container">
+        <div className="display-container" style={ style }>
             <h1 className="display-title">{ gameState.title }</h1>
             
             <div className="display-img">

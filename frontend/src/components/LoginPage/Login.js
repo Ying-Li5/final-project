@@ -31,9 +31,7 @@ export default function Login() {
                 <br />
                 <a href="#">Create a Free Account</a>
             </div>
-
           </div>
-
         </div>
     )
 }

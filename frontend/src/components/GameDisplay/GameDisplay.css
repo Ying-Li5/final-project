@@ -102,12 +102,10 @@
     font-size: 12px;
 }
 
-
 .review-container {
     border-top: 1px #434c56 solid;
     margin-top: 3%;
 }
-
 
 /* BUTTON  */
 button {
@@ -124,24 +122,23 @@ button {
     transition: .3s linear, color 0s, background-color 0s;
     outline: var(--b) solid #0000;
     outline-offset: .2em;
-  }
+}
 
-  button:hover,
-  button:focus-visible{
+button:hover, button:focus-visible{
     --_p: 0px;
     outline-color: var(--c);
     outline-offset: .05em;
-  }
+}
 
-  button:active {
+button:active {
     background: var(--c);
     color: white;
-  }
+}
   
-  button {
+button {
     font-family: system-ui, sans-serif;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
     border: none;
-  }
+}

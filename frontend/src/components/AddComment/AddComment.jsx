@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import style from './AddComment.css'
 
 const AddComment = (props) => {
-    //create state variables for each field, that updates every time the user types
-    //when the user clicks the button it makes the request
     const { game_id, addReview } = props
     const [authorState, setAuthorState] = useState('')
     const [scoreState, setScoreState ] = useState('1')
@@ -27,7 +25,6 @@ const AddComment = (props) => {
         }).then((result) => {
             result.json().then((newReview) => addReview(newReview))
         })
-
     }
 
     return (
