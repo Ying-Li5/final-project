@@ -36,6 +36,3 @@ async function seed() {
 }
 
 seed()
-
-
-

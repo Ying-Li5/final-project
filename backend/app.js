@@ -22,12 +22,10 @@ mongoose.connect("mongodb://127.0.0.1/final-project", {
   useUnifiedTopology: true
 })
 
-
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
 app.listen(port, () => {
-    // mongo set up info
     console.log(`Example app listening on port ${port}`)
 })

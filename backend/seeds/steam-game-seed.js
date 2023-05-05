@@ -2,11 +2,6 @@ const Game = require("../models/Game.js")
 const mongoose = require("mongoose")
 const axios = require("axios")
 
-//User Game Fetch
-// http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=DD97B0F0FF4FFDF40050336C440293F1&steamid=76561198406950097&format=jsonw
-//App data fetch 
-// http://store.steampowered.com/api/appdetails?appids=1150690
-
 async function gameSeed() {
     mongoose.connect("mongodb://127.0.0.1/final-project", {
         useNewUrlParser: true, 
@@ -35,6 +30,3 @@ async function gameSeed() {
     
 } 
 gameSeed()
-
-
-
