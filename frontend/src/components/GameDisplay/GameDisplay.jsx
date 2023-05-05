@@ -5,12 +5,34 @@ import ReviewDisplay from "../ReviewDisplay/ReviewDisplay";
 import AddComment from '../AddComment/AddComment'
 
 const GameDisplay = (props) => {
+    const [sortState, setSortState] = useState(true)
+    const [buttonState, setButtonState] = useState('Sort Newest to Oldest')
     const [gameState, setGameState] = useState() //First one is the state, second one is a function to set the state
     const [reviewState, setReviewState] = useState([])
     const { game_id } = useParams()
 
     const addReview = (newReview) => {
         setReviewState([...reviewState, newReview])
+    }
+
+    const sortReview = () => {
+        if (sortState === true) {
+            let newArr = reviewState.toSorted((a,b) => {
+                //this was weird :(
+                return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+            })
+            setReviewState(newArr)
+            setButtonState('Sort Oldest to Newest')
+            setSortState(false)
+        } else {
+            let newArr = reviewState.toSorted((a,b) => {
+                //this was weird :(
+                return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+            })
+            setReviewState(newArr)
+            setButtonState('Sort Newest to Oldest')
+            setSortState(true)
+        }
     }
 
     useEffect(() => {
@@ -62,7 +84,15 @@ const GameDisplay = (props) => {
             </div>
 
             <div className="display-reviews">
-                <h4 className="reviews-title">REVIEWS</h4>
+                <div className="text-holders">
+                    <div className="title-holder">
+                        <h4 className="reviews-title">REVIEWS</h4>
+                    </div>
+
+                    <div className="sort-holder">
+                    <button type="button"  onClick={ sortReview }>{ buttonState }</button>
+                    </div>
+                </div>
                     <div className="reviews-container">
                         < ReviewDisplay reviews={ reviewState }/>
                     </div>

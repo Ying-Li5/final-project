@@ -17,6 +17,7 @@ const AddComment = (props) => {
             game_id: game_id,
             title: titleState,
             content: descriptionState,
+            createdAt: new Date()
         }
 
         fetch(`http://localhost:3000/review`, {
@@ -88,8 +89,8 @@ const AddComment = (props) => {
                 </div>
             </form>
 
-            <div class="form-group">
-                <button type="button" class="btn btn-success" onClick={ submitReview }>Submit</button>
+            <div class="form-group-button">
+                <button type="button" onClick={ submitReview }>Submit</button>
             </div>
         </div>
     )

@@ -11,7 +11,7 @@ export const GameCard = (props) => {
                 <Card.Body>
                     <Card.Title>{ game.title }</Card.Title>
                     <Card.Text>{ game.year }</Card.Text>
-            
+
                     <a href={`/game/${ game._id }`} class="btn btn-secondary">More on { game.title }</a>
                 </Card.Body>
             </div>

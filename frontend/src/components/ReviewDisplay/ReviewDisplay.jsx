@@ -6,7 +6,6 @@ const ReviewDisplay = (props) => {
     const { reviews } = props
     return (
         <div className="review-container" style={ style }>
-            <h4></h4>
             {reviews.map((review) => {
                 return (
                     <div className="reviewer-container">
