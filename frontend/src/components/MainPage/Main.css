@@ -33,8 +33,8 @@ a {
 .main-grid-container {
     display: grid;
     grid-template-columns: 0.15fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-rows: 0.0fr 1fr 1fr;
+    grid-template-areas:
     'aside game'
     'aside game'
     'aside game ';
@@ -55,7 +55,7 @@ a {
     .main-grid-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 0.1fr 1fr;
         grid-template-areas: 
         "game";
     }

@@ -1,5 +1,4 @@
 // insert routing here
-
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -14,9 +13,8 @@ import GameDisplay from './components/GameDisplay/GameDisplay'
 export default function App() {
   return (
     <div className="App">
-      <Nav />
-      {/* routing -- need to be fixed */}
       <BrowserRouter>
+      <Nav />
         <Switch>
           <Route path='/game/:game_id' component={ GameDisplay } strict />
           <Route path='/login' component={ Login }/>
