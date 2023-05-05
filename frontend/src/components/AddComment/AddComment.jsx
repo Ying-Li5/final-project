@@ -96,7 +96,7 @@ const AddComment = (props) => {
             </form>
 
             <div class="form-group-button">
-                <button type="button" onClick={ submitReview }>Submit</button>
+                <button type="button" className="submit-form" onClick={ submitReview }>Submit</button>
             </div>
         </div>
     )

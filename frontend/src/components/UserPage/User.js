@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import profilePic from '../../public/images/Alax.jpg'
+import Avatar from '../../public/images/avatar.png'
 import style from './User.css'
 
 export default function User() {
@@ -10,7 +10,7 @@ export default function User() {
             <div class="container text-center" className="profile-header">
                 <div class="row">
                     <div class="col-sm-8">
-                        <img className="profile-pic" src={profilePic} />
+                        <img className="profile-pic" src={ Avatar } />
                         <h3 className="username">Insert username here</h3>
                         <h4 className="user-level">Insert user's level here</h4>
                     </div>

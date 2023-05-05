@@ -1,6 +1,6 @@
 import React from "react";
 import style from './ReviewDisplay.css'
-import MockImage from '../../public/images/Alax.jpg'
+import Avatar from '../../public/images/avatar.png'
 
 const ReviewDisplay = (props) => {
     const { reviews } = props
@@ -11,7 +11,7 @@ const ReviewDisplay = (props) => {
                     <div className="reviewer-container">
                         <div className="reviewer">
                             <div className="profile-img">
-                                <img src={ MockImage } alt="Avatar" class='avatar' />
+                                <img src={ Avatar } alt="Avatar" class='avatar' />
 
                                 <div className="reviewer-info">
                                     <p className="content-reviewer">

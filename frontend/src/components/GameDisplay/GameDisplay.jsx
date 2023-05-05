@@ -46,7 +46,6 @@ const GameDisplay = (props) => {
     }, [])
 
     useEffect(() => {
-        console.log("making the request")
         const url = `http://localhost:8080/review/game/${game_id}`
         fetch(url, {
             method: "GET",
@@ -55,8 +54,6 @@ const GameDisplay = (props) => {
             result.json().then((resolvedResult) => setReviewState(resolvedResult))
         })
     }, [])
-
-    console.log(reviewState)
 
     if (gameState == undefined) {
         return <div></div>
@@ -91,7 +88,7 @@ const GameDisplay = (props) => {
                     </div>
 
                     <div className="sort-holder">
-                    <button type="button"  onClick={ sortReview }>{ buttonState }</button>
+                    <button type="button" className="sort-button"  onClick={ sortReview }>{ buttonState }</button>
                     </div>
                 </div>
                     <div className="reviews-container">

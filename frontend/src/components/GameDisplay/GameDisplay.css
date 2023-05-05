@@ -9,7 +9,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.09fr 0.4fr 0.3fr 0.5fr;
+    grid-template-rows: 0.09fr 0.5fr 0.3fr 0.5fr;
     grid-template-areas: 
     'title title'
     'img info'
@@ -108,7 +108,7 @@
 }
 
 /* BUTTON  */
-button {
+.sort-button {
     --b: 3px;   /* border thickness */
     --s: .15em; /* size of the corner */
     --c: white;
@@ -124,18 +124,18 @@ button {
     outline-offset: .2em;
 }
 
-button:hover, button:focus-visible{
+.sort-button:hover, .sort-button:focus-visible{
     --_p: 0px;
     outline-color: var(--c);
     outline-offset: .05em;
 }
 
-button:active {
+.sort-button:active {
     background: var(--c);
     color: white;
 }
   
-button {
+.sort-button {
     font-family: system-ui, sans-serif;
     font-weight: bold;
     font-size: 16px;
