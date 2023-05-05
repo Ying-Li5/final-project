@@ -12,8 +12,4 @@ router.get("/:game_id", async function (req, res) {
   res.status(200).json(result)
 });
 
-router.post("/review", function (req, res) {
-  res.send("POST - Update avg review score of game");
-});
-
 module.exports = router;

@@ -17,10 +17,4 @@ router.post("/", async function (req, res) {
     res.send(result);
 });
 
-router.get("/:game_id", function (req, res) {
-    res.send("GET - Get the reviews for a given game")
-});
-
-
-
 module.exports = router;

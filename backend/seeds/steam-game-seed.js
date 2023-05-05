@@ -27,6 +27,6 @@ async function gameSeed() {
     }))
     const finalArr = gameArr.filter((game) => game !== undefined)
     await Game.bulkSave(finalArr)
-    
 } 
+
 gameSeed()
