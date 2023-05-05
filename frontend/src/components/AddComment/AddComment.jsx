@@ -18,12 +18,18 @@ const AddComment = (props) => {
             createdAt: new Date()
         }
 
-        fetch(`http://localhost:3000/review`, {
+        fetch(`http://localhost:8080/review`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(obj),
         }).then((result) => {
-            result.json().then((newReview) => addReview(newReview))
+            result.json().then((newReview) => {
+                addReview(newReview)
+                setAuthorState('')
+                setScoreState('1')
+                setTitleState('')
+                setDescriptionState('')
+            })
         })
     }
 
@@ -38,6 +44,7 @@ const AddComment = (props) => {
                     id="exampleFormControlInput1" 
                     placeholder="Insert author name..."
                     onChange={ (event) => setAuthorState(event.target.value) }
+                    value={ authorState }
                     required />
                 </div>
 
@@ -47,9 +54,9 @@ const AddComment = (props) => {
                     class="form-control" 
                     id="exampleFormControlSelect1" 
                     onChange={ (event) => {
-                        console.log(event.target.value)
                         setScoreState(event.target.value)
                     } }
+                    value={ scoreState }
                     required >
                         <option>1</option>
                         <option>2</option>
@@ -71,7 +78,8 @@ const AddComment = (props) => {
                     id="exampleFormControlTextarea1" 
                     rows="1" 
                     placeholder="Insert review title..."
-                    onChange={ (event) => setTitleState(event.target.value) } />
+                    onChange={ (event) => setTitleState(event.target.value) } 
+                    value={ titleState }/>
                 </div>
 
                 <div class="form-group">
@@ -82,6 +90,7 @@ const AddComment = (props) => {
                     rows="3" 
                     placeholder="Insert review here..."
                     onChange={ (event) => setDescriptionState(event.target.value) } 
+                    value={ descriptionState }
                     required />
                 </div>
             </form>

@@ -36,7 +36,7 @@ const GameDisplay = (props) => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:3000/game/${game_id}`
+        const url = `http://localhost:8080/game/${game_id}`
         fetch(url, {
             method: "GET",
             headers: {'Content-Type': 'application/json'},
@@ -47,7 +47,7 @@ const GameDisplay = (props) => {
 
     useEffect(() => {
         console.log("making the request")
-        const url = `http://localhost:3000/review/game/${game_id}`
+        const url = `http://localhost:8080/review/game/${game_id}`
         fetch(url, {
             method: "GET",
             headers: {'Content-Type': 'application/json'},
