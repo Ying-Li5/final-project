@@ -11,8 +11,6 @@ app.use(cors())
 
 const indexRouter = require("../index.js")
 
-app.use("/", indexRouter)
-
 mongoose.connect("mongodb+srv://yingli:Welcome1@game-library.quo9kgy.mongodb.net/", {
   useNewUrlParser: true, 
   useUnifiedTopology: true
@@ -25,5 +23,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
+app.use("/", indexRouter)
 
 module.exports = app;
