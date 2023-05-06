@@ -40,7 +40,7 @@ The user will be able to create a review and it will be displayed under the form
 
 ## 🌸 **Demo**
 
-* The application is currently deployed using [Vercel](https://game-library-fe.vercel.app/home)
+* The application is currently deployed using [Heroku](https://game-library-fe.herokuapp.com/)
 
 ## 🌸 **Routes**
 
@@ -89,7 +89,7 @@ The user will be able to create a review and it will be displayed under the form
 To clone the repository -- make sure that *(your-username)* is the same as your **Github username**:
 
  ```shell
-git clone https://github.com/Ying-Li5/final-project
+git clone https://github.com/(your-username)/final-project
 ```
 
 Go into the repository:
@@ -164,7 +164,7 @@ npm start
 ## ❗ **Issues**
 
 * Ran into issues with the Steam API which was a little complicated due to the promises and the bulkSave and obtained help
-* Ran into BE deployment with vercel
+* My seed is bugged and author name is not showing up on comment display
 
 ## ✨ **Future Additions**
 
