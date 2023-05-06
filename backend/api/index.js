@@ -4,9 +4,9 @@ const port = 8080
 const cors = require('cors')
 const mongoose = require('mongoose')
 
-const gameController = require("./controllers/gameController")
-const reviewController = require("./controllers/reviewController")
-const userController = require("./controllers/userController")
+const gameController = require("../controllers/gameController")
+const reviewController = require("../controllers/reviewController")
+const userController = require("../controllers/userController")
 
 
 // MIDDLEWARE
