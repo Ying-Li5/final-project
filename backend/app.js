@@ -17,7 +17,7 @@ app.use("/game", gameController)
 app.use("/user", userController)
 app.use("/review", reviewController)
 
-mongoose.connect("mongodb://127.0.0.1/final-project", {
+mongoose.connect("mongodb+srv://yingli:Welcome1@game-library.quo9kgy.mongodb.net/", {
   useNewUrlParser: true, 
   useUnifiedTopology: true
 })
