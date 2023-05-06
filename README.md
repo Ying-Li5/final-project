@@ -109,7 +109,7 @@ code .
 Go into the frontend and backend folder and install dependencies:
 
 ```shell
-cd frontend/ (or /backend)
+cd frontend/ (or cd /backend)
 
 npm init -y 
 
@@ -138,7 +138,28 @@ npm start
 
 ## 🌸 **Technologies**
 
-* 
+### Frontend
+
+* `@testing-library/jest-dom`
+* `@testing-library/react`
+* `@testing-library/user-event`
+* `bootstrap`
+* `react`
+* `react-bootstrap`
+* `react-bootstrap-icons`
+* `react-dom`
+* `react-icons`
+* `react-router-dom`
+* `react-scripts`
+* `web-vitals`
+
+### Backend
+
+* `axios`
+* `cors`
+* `express`
+* `dotenv`
+* `mongoose`
 
 ## ❗ **Issues**
 
