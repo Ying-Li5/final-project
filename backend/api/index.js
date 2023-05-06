@@ -4,12 +4,19 @@ const port = 8080
 const cors = require('cors')
 const mongoose = require('mongoose')
 
+const gameController = require("./controllers/gameController")
+const reviewController = require("./controllers/reviewController")
+const userController = require("./controllers/userController")
+
+
 // MIDDLEWARE
 app.use(express.json())
 
 app.use(cors())
 
-const indexRouter = require("../index.js")
+router.use("/game", gameController)
+router.use("/user", userController)
+router.use("/review", reviewController)
 
 mongoose.connect("mongodb+srv://yingli:Welcome1@game-library.quo9kgy.mongodb.net/", {
   useNewUrlParser: true, 
@@ -23,7 +30,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
-
-app.use("/", indexRouter)
 
 module.exports = app;
